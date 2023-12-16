@@ -8,4 +8,3 @@
  */
 
 rootProject.name = "UnitedChunksofPaper.Plugin"
-include("plugin")
