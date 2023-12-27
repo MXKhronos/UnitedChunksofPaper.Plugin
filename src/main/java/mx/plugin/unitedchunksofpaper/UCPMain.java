@@ -22,6 +22,7 @@ public class UCPMain extends JavaPlugin implements Listener {
         Bukkit.getPluginManager().registerEvents(this, this);
         logger.info("Hello Server!");
 
+        new OnlineSleeper();
         CustomRecipesLibrary.LoadRecipes();
     }
 

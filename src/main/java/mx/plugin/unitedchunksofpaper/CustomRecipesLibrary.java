@@ -17,6 +17,16 @@ public class CustomRecipesLibrary {
 
             UCPMain.plugin.getServer().addRecipe(itemRecipe);
         }
+        {
+            ItemStack item = new ItemStack(Material.BEEF);
+            NamespacedKey itemKey = new NamespacedKey(UCPMain.plugin, "beef_key");
+            ShapedRecipe itemRecipe = new ShapedRecipe(itemKey, item);
+            itemRecipe.shape("rr", "rr");
+            itemRecipe.setIngredient('r', Material.ROTTEN_FLESH);
+
+            UCPMain.plugin.getServer().addRecipe(itemRecipe);
+        }
+
 
         UCPMain.logger.info("Loaded custom receipes.");
     }
