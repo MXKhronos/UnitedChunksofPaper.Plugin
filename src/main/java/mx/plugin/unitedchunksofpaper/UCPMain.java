@@ -11,14 +11,23 @@ import org.bukkit.event.player.PlayerJoinEvent;
 import org.bukkit.plugin.java.JavaPlugin;
 
 public class UCPMain extends JavaPlugin implements Listener {
-    public Logger logger = null;
+    public static JavaPlugin plugin;
+    public static Logger logger = null;
 
     @Override
     public void onEnable() {
+        plugin = this;
         logger = this.getLogger();
 
         Bukkit.getPluginManager().registerEvents(this, this);
         logger.info("Hello Server!");
+
+        CustomRecipesLibrary.LoadRecipes();
+    }
+
+    @Override
+    public void onDisable() {
+        getServer().resetRecipes();
     }
 
     @EventHandler
